@@ -81,8 +81,13 @@ nav ul li a:hover{
 
 /* HEADER */
 header{
-    padding:140px 20px 80px;
-    background:linear-gradient(#111,#1a1a1a);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:120px 20px 40px;
+    background:linear-gradient(to bottom,#0b0b0b,#171717);
 }
 
 h1{
@@ -100,7 +105,8 @@ p{
 .button{
     display:inline-block;
     margin-top:25px;
-    padding:14px 30px;
+    padding:16px 38px;
+    font-size:18px;
     background:#e53935;
     color:white;
     text-decoration:none;
@@ -144,16 +150,25 @@ footer{
     margin-top:40px;
 }
 
-    .hero-logo{
-    width:700px;
-    max-width:90%;
-    height:auto;
-}
-
 .studio{
     color:#e53935;
     margin-top:8px;
 }
+
+      .hero-logo{
+    width:800px;
+    max-width:90%;
+    height:auto;
+    margin-bottom:40px;
+}
+
+    .hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+    
 </style>
 
 </head>
@@ -176,15 +191,18 @@ footer{
 <!-- HEADER -->
 <a href="#home">Home</a>
    <img src="Zombie2.png" class="hero-logo" alt="Zombie Outbreak Logo">
-    <p>Survive. Fight. Escape.</p>
 
-   <a class="button" href="https://www.roblox.com/games/115578054089395/Zombie-Outbreak" target="_blank">
+  <div class="hero-buttons">
+
+<a class="button" href="https://www.roblox.com/games/115578054089395/Zombie-Outbreak" target="_blank">
 ▶ Play on Roblox
 </a>
 
 <a class="button" href="https://discord.gg/74PmmaNewx" target="_blank">
 💬 Join Discord
 </a>
+
+</div>
 </header>
 
 <!-- ABOUT -->
