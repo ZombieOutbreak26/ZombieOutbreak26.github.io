@@ -6,12 +6,16 @@
 <title>Zombie Outbreak</title>
 
 <style>
+/* RESET */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:Arial, Helvetica, sans-serif;
-    html{
+}
+
+/* SMOOTH SCROLL */
+html{
     scroll-behavior:smooth;
 }
 
@@ -52,6 +56,23 @@ nav ul li a{
     color:white;
     text-decoration:none;
     transition:.2s;
+    position:relative;
+}
+
+/* underline hover effect */
+nav ul li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#e53935;
+    transition:0.2s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
 }
 
 nav ul li a:hover{
@@ -75,6 +96,7 @@ p{
     color:#ccc;
 }
 
+/* BUTTONS */
 .button{
     display:inline-block;
     margin-top:25px;
@@ -82,11 +104,14 @@ p{
     background:#e53935;
     color:white;
     text-decoration:none;
-    border-radius:8px;
-    transition:.2s;
+    border-radius:10px;
+    transition:0.2s;
+    font-weight:bold;
+    letter-spacing:0.5px;
 }
 
 .button:hover{
+    transform:scale(1.05);
     background:#ff4d4d;
 }
 
@@ -95,6 +120,7 @@ section{
     padding:70px 20px;
 }
 
+/* FEATURES */
 .features{
     display:flex;
     justify-content:center;
@@ -156,7 +182,7 @@ footer{
 </header>
 
 <!-- ABOUT -->
-<section>
+ <section id="about">
     <h2>Welcome</h2>
     <p>Fight through endless waves of zombies, level up, unlock weapons, and survive with your team.</p>
 
